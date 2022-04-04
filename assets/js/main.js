@@ -15,3 +15,27 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+
+// search bar
+
+const searchBar = document.querySelector('.searcBar');
+
+searchBar.addEventListener('click', function() {
+    const search_box = document.querySelector('.search_box');
+
+    search_box.classList.toggle('search_box_border')
+    search_box.classList.toggle('active_search');
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
