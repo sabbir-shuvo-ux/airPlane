@@ -1,0 +1,444 @@
+:root{
+	--main-color: rgba(11, 94, 215, .6);
+	--two-color: #50585D;
+}
+
+*{
+	outline: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+a{
+	text-decoration: none;
+}
+
+section{
+	border-bottom: 1px solid #ddd;
+}
+
+/* navbar */
+.navbar-light .navbar-nav .nav-link {
+	color: rgba(57, 48, 115, .9);
+	font-size: 1rem;
+	font-weight: 600;
+	padding-left: 2.1rem;
+}
+
+.navbar-light .navbar-brand {
+	color: #6D9EE7;
+	font-weight: bold;
+}
+
+.fa-search{
+	font-size: 1.2rem;
+}
+
+.navbarBorder {
+	border-bottom: 1px solid #ddd;
+}
+
+.active{
+	position: relative;
+}
+
+.active::after {
+	content: "";
+	position: absolute;
+	left: 24%;
+	bottom: -9px;
+	background: rgba(11, 94, 215, .6);
+	height: 3px;
+	width: 80%;
+	border-radius: 20px;
+}
+
+@media(max-width: 992px){
+	.active::after {
+		left: 6px;
+		bottom: 0;
+		height: 2px;
+		width: 100px;
+	}
+
+	.res_nav_btn{
+		justify-content: start !important;
+	}
+}
+
+/* hero */
+
+.hero_small{
+	width: 60px;
+}
+
+.date_time {
+	border: 1px solid #ddd;
+	border-radius: 0.25rem;
+	padding: 0 .5rem;
+}
+
+.form-group input{
+	border: none;
+}
+
+.hero {
+	height: calc(100vh - 60px);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.owl-nav{
+	display: none;
+}
+
+.hero_content_inner{
+	max-width: 400px;
+}
+
+.hero_content_inner h2 {
+	font-size: 3rem;
+	font-weight: bold;
+	margin-bottom: .5em;
+	color: var(--two-color);
+	text-transform: capitalize;
+}
+
+.hero_content_inner h2 span{
+	color: rgba(11, 94, 215, .6);
+}
+
+.period h5 {
+	text-align: center;
+	position: relative;
+}
+
+.period h5::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 55%;
+	height: 2px;
+	width: 33%;
+	background: #B4CBED;
+}
+
+.period h5::before {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 55%;
+	height: 2px;
+	width: 33%;
+	background: #B4CBED;
+}
+
+.form-group {
+	border: 1px solid #ddd;
+	border-radius: .25rem;
+	margin: .5em;
+	padding: .5em;
+	margin-left: 0;
+}
+
+.hero_btn button {
+	border: 1px solid transparent;
+	background: var(--main-color);
+	color: white;
+	box-shadow: 0px 0px 14px 0px var(--main-color);
+}
+
+.hero_btn button:hover{
+	background: transparent;
+	color: black;
+	border: 1px solid var(--main-color);
+}
+
+.pr{
+	padding-right: 20px;
+}
+
+.w_costume {
+	width: 44% !important;
+	margin-top: 1.4em;
+}
+
+.inputs {
+	width: 50%;
+}
+
+.pt_1{
+	padding: 0.5em 0;
+}
+
+.owl-dot.active:after{
+	display: none;
+}
+
+@media(max-width: 764px){
+	.hero_res_one{
+		order: 2;
+	}
+
+	.hero_res_two{
+		order: 1;
+	}
+
+	.hero {
+		height: auto;
+		padding: 60px 0;
+	}
+}
+
+/* ----- airport_name ------ */
+
+.airport_name{
+	padding: 60px 0;
+}
+
+.air_name_title {
+	font-size: 3rem;
+	font-weight: 700;
+	margin-bottom: 2em;
+	color: var(--two-color);
+	position: relative;
+}
+
+.air_name_title::after {
+	position: absolute;
+	content: '';
+	left: 50%;
+	bottom: -25px;
+	transform: translate(-50%);
+	background: rgba(11, 94, 215, .6);
+	height: 5px;
+	width: 16%;
+	border-radius: 30px;
+}
+
+.air_grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 1em;
+}
+
+.air_grid .air_name:nth-child(even){
+	background: var(--main-color);
+	color: white;
+}
+
+.air_grid .air_name:nth-child(odd){
+	background: #CCCCCC;
+	color: #797470;
+}
+
+.air_grid .air_name{
+	text-align: center;
+	text-transform: capitalize;
+	padding: .7em 0;
+}
+
+.air_name h4 {
+	font-weight: 300;
+	font-size: 1.2rem;
+}
+
+@media(max-width: 766px){
+	.air_grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media(max-width: 500px){
+	.air_grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* # --- footer --- # */
+.footer{
+	background: #474D5D;
+	padding: 60px 0;
+}
+
+.footer_title{
+	margin-bottom: 1.5em;
+}
+
+.footer_title h4{
+	color: #fff;
+}
+
+.fa-paper-plane-o{
+	font-size: 1.5rem;
+}
+
+.footer_one ul li {
+	display: flex;
+	align-items: center;
+	gap: .8em;
+	line-height: 35px;
+}
+
+.footer_one ul li i {
+	color: #93959C;
+	font-size: 1.2rem;
+}
+
+.footer_one ul li a {
+	color: #93959C;
+}
+
+.footer_small_img{
+	width: 100px;
+	margin: 0 auto;
+}
+/* # -- compare -- # */
+
+.compare{
+	padding: 60px 0;
+}
+
+.com_title {
+	max-width: 800px;
+	margin: 0 auto;
+	margin-bottom: 2em;
+}
+
+.card_main {
+	gap: 1.2em;
+}
+
+.main_btn{
+	border: 1px solid transparent;
+	background: var(--main-color);
+	color: white;
+	box-shadow: 0px 0px 14px 0px var(--main-color);
+}
+
+.main_btn:hover{
+	border: 1px solid var(--main-color);
+	background: transparent;
+}
+
+.card_title {
+	height: auto;
+	min-height: 150px;
+}
+
+.card_img {
+	width: 180px;
+}
+
+.card_img img{
+	max-width: 100%;
+	height: auto;
+}
+
+@media(max-width: 767px){
+	.card_main {
+		margin-bottom: 2rem;
+	}
+}
+
+@media (max-width: 575.98px) {
+	.card_main {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.card_title {
+		height: auto;
+	}
+}
+
+/* -- package -- */
+
+.package{
+	padding: 60px 0;
+}
+
+.main_package {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.pack_card {
+	width: 300px;
+	text-align: center;
+	border: 1px solid #ddd;
+	border-radius: .25rem;
+	overflow: hidden;
+}
+
+.card_body{
+	padding: .8em;
+}
+
+
+.btn_compare{
+	margin-top: 4rem;
+}
+
+.card_body p{
+	text-align: justify;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: .5em;
+	color: #343F47;
+}
+
+.pack_img{
+	transition: 300ms;
+}
+
+.pack_img:hover{
+	transform: scale(1.1);
+}
+
+.card_body h4 {
+	color: #343F47;
+	text-transform: capitalize;
+}
+
+.price_tag {
+	text-align: end;
+	background: aliceblue;
+	margin: 10px;
+	color: var(--main-color);
+}
+
+@media(max-width: 991px){
+	.main_package{
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+/* fixed_sidebar */
+.fixed_sidebar {
+	position: fixed;
+	z-index: 999;
+	right: 0;
+	top: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+	background: var(--main-color);
+	padding: 1em;
+	transform: translateY(-50%);
+	border-top-left-radius: .50rem;
+	border-bottom-left-radius: .50rem;
+}
+
+.fixed_sidebar i {
+	font-size: 1.3rem;
+	color: white;
+}
