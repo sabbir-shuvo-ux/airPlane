@@ -70,6 +70,11 @@ section{
 	.res_nav_btn{
 		justify-content: start !important;
 	}
+
+	.navbarBorder {
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+	}
 }
 
 /* hero */
@@ -416,9 +421,11 @@ section{
 }
 
 @media(max-width: 991px){
-	.main_package{
+	.main_package {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2rem;
 	}
 }
 
